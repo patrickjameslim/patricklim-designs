@@ -1,0 +1,42 @@
+---
+import profilePicture from '../assets/Patrick_Lim_Picture.jpg';
+---
+
+<section id="hero" class="relative overflow-hidden border-b border-slate-100 bg-white">
+	<div class="flex w-full justify-between gap-8 max-w-[1440px] mx-auto py-20 border-b border-slate-100">
+		<div class="hero-left">
+			<h1 class="text-4xl font-semibold tracking-tight text-slate-900 md:text-5xl lg:text-6xl">
+				Enterprise Product Design
+			</h1>
+			<p class="text-7xl font-bold leading-snug text-indigo-500 md:text-4xl lg:text-7xl font-[Dancing_Script]">
+				and Scalable Systems
+			</p>
+			<p class="text-lg text-slate-600 my-5">
+				10+ years of transforming intricate workflows into intuitive and adoption-driving experiences. I enjoy bringing clarity to complex business solutions through designing multiplatform digital products.
+			</p>
+			<div class="flex flex-wrap items-center gap-4 pt-6">
+				<a
+					href="#work"
+					class="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-sm text-white font-medium transition hover:bg-indigo-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+				>
+					View my work
+					<span class="text-white">
+						<i class="ri-arrow-down-line"></i>
+					</span>
+				</a>
+				<a
+					href="#work"
+					class="inline-flex items-center gap-2 rounded-lg border-2 border-slate-100 px-6 py-3 text-sm font-medium shadow-sm transition hover:bg-slate-100"
+				>
+					<span>
+						<i class="ri-file-line"></i>
+					</span>
+					Download CV
+				</a>
+			</div>
+		</div>
+		<div class="hero-right max-w-[512px]">
+			<img src={profilePicture.src} alt="Patrick Lim" class="w-full h-full object-cover rounded-full" />
+		</div>
+	</div>
+</section>

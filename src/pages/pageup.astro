@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TopNav from '../components/TopNav.astro';
+import Footer from '../components/Footer.astro';
+import pageUpMacbook from '../assets/PageUp_Article.svg';
+---
+
+<Layout>
+	<TopNav />
+
+	<main class="bg-white">
+		<section class="relative overflow-hidden border-b border-slate-100 bg-white">
+			<!-- Hero gradient band with laptop image -->
+			<div class="w-full bg-linear-to-r from-emerald-100 via-slate-50 to-rose-100">
+				<div class="max-w-[960px] mx-auto py-16 px-4">
+					<img src={pageUpMacbook.src} alt="PageUp case study cover" class="w-full h-auto object-contain" />
+				</div>
+			</div>
+		</section>
+
+		<section class="max-w-[960px] mx-auto py-16 px-4 space-y-12">
+			<!-- Title, subtitle, tags -->
+			<div class="space-y-6 text-center">
+				<p class="text-sm uppercase tracking-[0.2em] text-indigo-500 font-semibold">Case Study · PageUp</p>
+				<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
+					Redefining the job requisition experience: a visionary platform redesign driven by user discovery and validation
+				</h1>
+				<p class="text-base md:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
+					Establishing modern, standardized UI patterns for PageUp’s Jobs Platform, earning key stakeholder validation and a prestigious company award nomination.
+				</p>
+				<div class="flex flex-wrap items-center justify-center gap-3">
+					<span class="px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-medium">B2B SaaS</span>
+					<span class="px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-medium">Enterprise Design</span>
+					<span class="px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-medium">User Research</span>
+				</div>
+			</div>
+
+			<!-- About -->
+			<div class="space-y-4">
+				<h2 class="text-2xl font-bold text-slate-900">About</h2>
+				<p class="text-slate-700 leading-relaxed">
+					PageUp is an AI-powered talent acquisition platform designed to streamline hiring and connect people. By leveraging advanced automation, the platform delivers personalized experiences at scale. This case study showcases how a design discovery phase helped redefine the future of one of PageUp’s most‑used features.
+				</p>
+			</div>
+
+			<div class="grid gap-10 lg:grid-cols-2">
+				<div class="space-y-3">
+					<h2 class="text-2xl font-bold text-slate-900">Goals</h2>
+					<ul class="space-y-2 text-slate-700 leading-relaxed list-disc list-inside">
+						<li>Create consistent, reusable patterns for requisition creation</li>
+						<li>Reduce errors and back-and-forth between hiring managers and recruiters</li>
+						<li>Support compliance and localization without fragmenting the UX</li>
+					</ul>
+				</div>
+				<div class="space-y-3">
+					<h2 class="text-2xl font-bold text-slate-900">Outcomes</h2>
+					<ul class="space-y-2 text-slate-700 leading-relaxed list-disc list-inside">
+						<li>Unified navigation and hierarchy for requisition details</li>
+						<li>Componentized forms and validation for rapid configuration</li>
+						<li>Clear status and collaboration cues for multi-actor workflows</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="space-y-4">
+				<h2 class="text-2xl font-bold text-slate-900">Process Highlights</h2>
+				<div class="grid gap-6 lg:grid-cols-3">
+					<div class="p-5 rounded-xl border border-slate-100 bg-white shadow-sm">
+						<p class="text-sm font-semibold text-indigo-500 uppercase tracking-wide">Discovery</p>
+						<p class="mt-3 text-slate-700 leading-relaxed">
+							Stakeholder and user interviews across recruiters, hiring managers, and compliance teams; journey mapping to reveal friction in handoffs.
+						</p>
+					</div>
+					<div class="p-5 rounded-xl border border-slate-100 bg-white shadow-sm">
+						<p class="text-sm font-semibold text-indigo-500 uppercase tracking-wide">Design</p>
+						<p class="mt-3 text-slate-700 leading-relaxed">
+							Defined information architecture, reusable form patterns, and contextual guidance; prototyped high-risk workflows (approvals, cloning, templates).
+						</p>
+					</div>
+					<div class="p-5 rounded-xl border border-slate-100 bg-white shadow-sm">
+						<p class="text-sm font-semibold text-indigo-500 uppercase tracking-wide">Validation</p>
+						<p class="mt-3 text-slate-700 leading-relaxed">
+							Usability tests with power users and new hires; iterated on clarity for status, errors, and next steps; aligned with PM/Eng for delivery.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="space-y-4">
+				<h2 class="text-2xl font-bold text-slate-900">Key Screens</h2>
+				<p class="text-slate-700 leading-relaxed">
+					Representative views of the standardized requisition experience, illustrating consistent navigation, form patterns, and collaboration cues.
+				</p>
+				<div class="grid gap-6 lg:grid-cols-2">
+					<div class="rounded-2xl border border-slate-100 bg-white shadow-sm p-4">
+						<div class="aspect-video rounded-xl bg-slate-100 flex items-center justify-center text-slate-400">
+							Screen placeholder
+						</div>
+					</div>
+					<div class="rounded-2xl border border-slate-100 bg-white shadow-sm p-4">
+						<div class="aspect-video rounded-xl bg-slate-100 flex items-center justify-center text-slate-400">
+							Screen placeholder
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+

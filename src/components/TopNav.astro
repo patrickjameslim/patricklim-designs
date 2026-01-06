@@ -1,0 +1,93 @@
+---
+import Logo from '../assets/Logo_Patrick_Lim_Black.svg';
+---
+
+<nav class="flex sticky top-0 z-50 w-full px-4 py-4 border-b border-gray-200 bg-white/60 backdrop-blur-md">
+    <div class="flex w-full items-center justify-between max-w-[1440px] mx-auto">
+        <a href="/" class="">
+            <div class="flex items-center gap-2 transition hover:opacity-80">
+              <Logo/>
+              <span class="text-xl font-bold tracking-tight text-gray-900">Patrick Lim</span>
+            </div>
+            <div class="flex items-center gap-8">
+                <a href="#work" class="text-sm font-medium text-gray-900 transition hover:text-indigo-600">Work</a>
+                <a href="#about" class="text-sm font-medium text-gray-900 transition hover:text-indigo-600">About me</a>
+                <a href="/cv.pdf" class="text-sm font-medium text-gray-900 transition hover:text-indigo-600">Download CV</a>
+                
+                <div class="flex items-center gap-4">
+                    <a href="https://www.linkedin.com/in/patrickjameslim/" target="_blank" class="flex items-center gap-2 rounded-lg border bg-white border-gray-200 px-3 py-2 text-sm font-medium transition hover:bg-indigo-600 hover:text-white">
+                        <i class="ri-linkedin-fill"></i>
+                    </a>
+                    <div class="relative">
+                      <button
+                        id="copy-email-btn"
+                        type="button"
+                        class="flex items-center gap-2 rounded-lg border bg-white border-gray-200 px-4 py-2 text-sm font-medium transition hover:bg-indigo-600 hover:text-white"
+                      >
+                        <span class="text-gray-400">
+                          <i class="ri-mail-line"></i>
+                        </span>
+                        patricklim0907@gmail.com
+                      </button>
+                      <div
+                        id="copy-email-toast"
+                        class="absolute left-1/2 top-full mt-2 -translate-x-1/2 translate-y-2 rounded-md bg-slate-900 text-white text-xs px-3 py-1 shadow-sm opacity-0 pointer-events-none transition duration-200 whitespace-nowrap"
+                      >
+                        Copied to clipboard!
+                      </div>
+                    </div>
+                </div>
+                
+              </div>
+          </a>
+    </div>
+</nav>
+
+<script>
+  if (typeof window !== 'undefined') {
+    const EMAIL = 'patricklim0907@gmail.com';
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const button = document.getElementById('copy-email-btn');
+      const toast = document.getElementById('copy-email-toast');
+
+      if (!button || !toast) return;
+
+      let hideTimeout: number;
+
+      const showToast = () => {
+        toast.classList.remove('opacity-0', 'translate-y-2');
+        toast.classList.add('opacity-100', 'translate-y-0');
+
+        window.clearTimeout(hideTimeout);
+        hideTimeout = window.setTimeout(() => {
+          toast.classList.add('opacity-0', 'translate-y-2');
+          toast.classList.remove('opacity-100', 'translate-y-0');
+        }, 1800);
+      };
+
+      const copyEmail = async () => {
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(EMAIL);
+          } else {
+            const textarea = document.createElement('textarea');
+            textarea.value = EMAIL;
+            textarea.style.position = 'fixed';
+            textarea.style.left = '-9999px';
+            document.body.appendChild(textarea);
+            textarea.focus();
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+          }
+          showToast();
+        } catch (error) {
+          console.error('Failed to copy email to clipboard', error);
+        }
+      };
+
+      button.addEventListener('click', copyEmail);
+    });
+  }
+</script>

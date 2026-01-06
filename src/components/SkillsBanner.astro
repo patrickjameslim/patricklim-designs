@@ -1,0 +1,80 @@
+---
+const skills = [
+	"UI Design",
+    "UX Design",
+	"AI Experience",
+	"Systemic Thinking",
+	"Design Systems",
+	"Front-end Web",
+	"User Research",
+	"Product Strategy",
+	"Enterprise Design"
+];
+---
+
+<section class="relative w-full overflow-hidden py-8 border-b border-slate-200">
+	<!-- Gradient background: white on edges, dark in center -->
+	<div class="absolute inset-0 bg-linear-to-r from-white to-white"></div>
+	
+	<!-- Scrolling container -->
+	<div class="relative overflow-hidden">
+		<div class="flex animate-scroll">
+			<!-- First set of items -->
+			<div class="flex items-center gap-12 whitespace-nowrap px-8">
+				{skills.map((skill) => (
+					<div class="flex items-center gap-2">
+						<span class="text-2xl text-indigo-500" aria-hidden="true"><i class="ri-asterisk"></i></span>
+						<span class="text-lg md:text-xl font-medium text-slate-900">
+							{skill}
+						</span>
+					</div>
+				))}
+			</div>
+			
+			<!-- Duplicate set for seamless loop -->
+			<div class="flex items-center gap-20 whitespace-nowrap">
+				{skills.map((skill) => (
+					<div class="flex items-center gap-2">
+						<span class="text-2xl text-indigo-500" aria-hidden="true"><i class="ri-asterisk"></i></span>
+						<span class="text-lg md:text-xl font-medium text-slate-900">
+							{skill}
+						</span>
+					</div>
+				))}
+			</div>
+		</div>
+		
+		<!-- Left gradient fade -->
+		<div class="absolute left-0 top-0 bottom-0 w-96 bg-linear-to-r from-white to-transparent z-10 pointer-events-none"></div>
+		
+		<!-- Right gradient fade -->
+		<div class="absolute right-0 top-0 bottom-0 w-96 bg-linear-to-l from-white to-transparent z-10 pointer-events-none"></div>
+	</div>
+</section>
+
+<style>
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-50%);
+		}
+	}
+	
+	.animate-scroll {
+		animation: scroll 40s linear infinite;
+		display: flex;
+		width: fit-content;
+		will-change: transform;
+	}
+	
+	.animate-scroll > div {
+		flex-shrink: 0;
+	}
+	
+	.animate-scroll:hover {
+		animation-play-state: paused;
+	}
+</style>
+

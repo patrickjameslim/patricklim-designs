@@ -1,0 +1,32 @@
+---
+import WorkCard from './WorkCard.astro';
+import pageUpImage from '../assets/PageUp.svg';
+import challongeImage from '../assets/Challonge.svg';
+import twitchImage from '../assets/Twitch.svg';
+---
+
+<section id="work" class="w-full max-w-[1440px] mx-auto py-20">
+	<h1 class="text-4xl font-bold mb-12">Work</h1>
+	<WorkCard
+		title="Redefining the job requisition experience: a visionary platform redesign driven by user discovery and validation"
+		description="Establishing modern, standardized UI patterns for PageUp's Jobs Platform, earning key stakeholder validation and a prestigious company award nomination."
+		tags={["B2B SaaS", "Enterprise Design", "User Research"]}
+		imageSrc={pageUpImage.src}
+		imageAlt="PageUp Jobs Platform"
+		href="/pageup"
+	/>
+	<WorkCard
+		title="Defining the DNA: Creating a Design System from the Ground Up for Challonge"
+		description="Building a &quot;source of truth&quot; from the ground up. This zero-to-one initiative established Challonge's first foundational design system, delivering a scalable library of tokens and components to align design and engineering teams."
+		tags={["B2B SaaS", "Enterprise Design", "User Research"]}
+		imageSrc={challongeImage.src}
+		imageAlt="Challonge Design System"
+	/>
+	<WorkCard
+		title="Powering the arena: designing the experience for Twitch Rivals' global competitive platform"
+		description="Streamlining tournament schedules, custom bracket designs, and event details that are now used by the biggest streamers, thousands of viewers and major brands across 100+ events."
+		tags={["UI Design", "System Integration", "Cross-Brand Collaboration"]}
+		imageSrc={twitchImage.src}
+		imageAlt="Twitch UI Integration Design"
+	/>
+</section>
