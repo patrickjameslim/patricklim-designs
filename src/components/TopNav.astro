@@ -68,19 +68,7 @@ import Logo from '../assets/Logo_Patrick_Lim_Black.svg';
 
       const copyEmail = async () => {
         try {
-          if (navigator.clipboard && navigator.clipboard.writeText) {
-            await navigator.clipboard.writeText(EMAIL);
-          } else {
-            const textarea = document.createElement('textarea');
-            textarea.value = EMAIL;
-            textarea.style.position = 'fixed';
-            textarea.style.left = '-9999px';
-            document.body.appendChild(textarea);
-            textarea.focus();
-            textarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textarea);
-          }
+          await navigator.clipboard.writeText(EMAIL);
           showToast();
         } catch (error) {
           console.error('Failed to copy email to clipboard', error);
