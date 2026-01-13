@@ -3,21 +3,29 @@ import profilePicture from '../assets/Patrick_Lim_Picture.jpg';
 ---
 
 <section id="hero" class="relative overflow-hidden border-b border-slate-100 bg-white">
-	<div class="flex w-full justify-between gap-8 max-w-[1440px] mx-auto py-20 border-b border-slate-100">
-		<div class="hero-left">
-			<h1 class="text-4xl font-semibold tracking-tight text-slate-900 md:text-5xl lg:text-6xl">
+	<!-- Animated gradient shapes - hidden on mobile, visible on tablet+ -->
+	<div class="absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none overflow-visible hidden md:block">
+		<div class="absolute top-20 right-20 w-64 h-64 bg-indigo-200/70 rounded-full blur-3xl animate-blob"></div>
+		<div class="absolute bottom-20 right-40 w-72 h-72 bg-purple-200/70 rounded-full blur-3xl animate-blob-delayed"></div>
+		<div class="absolute top-1/2 right-1/4 w-56 h-56 bg-pink-200/60 rounded-full blur-3xl animate-blob-slow"></div>
+		<div class="absolute top-1/3 right-1/3 w-60 h-60 bg-cyan-200/65 rounded-full blur-3xl animate-blob-extra"></div>
+	</div>
+	
+	<div class="flex flex-col lg:flex-row w-full justify-between gap-8 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 border-b border-slate-100 relative z-10">
+		<div class="hero-left flex-1 lg:max-w-[600px]">
+			<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-900">
 				Enterprise Product Design
 			</h1>
-			<p class="text-7xl font-bold leading-snug text-indigo-500 md:text-4xl lg:text-7xl font-[Dancing_Script]">
+			<p class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-snug text-indigo-500 font-[Dancing_Script] mt-2">
 				and Scalable Systems
 			</p>
-			<p class="text-lg text-slate-600 my-5">
+			<p class="text-base sm:text-lg text-slate-600 my-4 sm:my-5 leading-relaxed">
 				10+ years of transforming intricate workflows into intuitive and adoption-driving experiences. I enjoy bringing clarity to complex business solutions through designing multiplatform digital products.
 			</p>
-			<div class="flex flex-wrap items-center gap-4 pt-6">
+			<div class="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 pt-4 sm:pt-6">
 				<a
 					href="#work"
-					class="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-sm text-white font-medium transition hover:bg-indigo-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+					class="inline-flex items-center justify-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-sm text-white font-medium transition hover:bg-indigo-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
 				>
 					View my work
 					<span class="text-white">
@@ -26,7 +34,7 @@ import profilePicture from '../assets/Patrick_Lim_Picture.jpg';
 				</a>
 				<a
 					href="#work"
-					class="inline-flex items-center gap-2 rounded-lg border-2 border-slate-100 px-6 py-3 text-sm font-medium shadow-sm transition hover:bg-slate-100"
+					class="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-slate-100 px-6 py-3 text-sm font-medium shadow-sm transition hover:bg-slate-100"
 				>
 					<span>
 						<i class="ri-file-line"></i>
@@ -35,8 +43,71 @@ import profilePicture from '../assets/Patrick_Lim_Picture.jpg';
 				</a>
 			</div>
 		</div>
-		<div class="hero-right max-w-[512px]">
-			<img src={profilePicture.src} alt="Patrick Lim" class="w-full h-full object-cover rounded-full" />
+		<div class="hero-right w-full sm:w-64 md:w-80 lg:max-w-[512px] mx-auto lg:mx-0 mt-8 lg:mt-0">
+			<img src={profilePicture.src} alt="Patrick Lim" class="w-full h-auto object-cover rounded-full aspect-square" />
 		</div>
 	</div>
 </section>
+
+<style>
+	@keyframes blob {
+		0%, 100% {
+			transform: translate(0, 0) scale(1);
+		}
+		33% {
+			transform: translate(30px, -50px) scale(1.1);
+		}
+		66% {
+			transform: translate(-20px, 20px) scale(0.9);
+		}
+	}
+	
+	@keyframes blob-delayed {
+		0%, 100% {
+			transform: translate(0, 0) scale(1);
+		}
+		33% {
+			transform: translate(-30px, 50px) scale(0.9);
+		}
+		66% {
+			transform: translate(20px, -20px) scale(1.1);
+		}
+	}
+	
+	@keyframes blob-slow {
+		0%, 100% {
+			transform: translate(0, 0) scale(1);
+		}
+		50% {
+			transform: translate(40px, 30px) scale(1.05);
+		}
+	}
+	
+	@keyframes blob-extra {
+		0%, 100% {
+			transform: translate(0, 0) scale(1);
+		}
+		25% {
+			transform: translate(-40px, -30px) scale(1.15);
+		}
+		75% {
+			transform: translate(30px, 40px) scale(0.85);
+		}
+	}
+	
+	.animate-blob {
+		animation: blob 20s ease-in-out infinite;
+	}
+	
+	.animate-blob-delayed {
+		animation: blob-delayed 25s ease-in-out infinite;
+	}
+	
+	.animate-blob-slow {
+		animation: blob-slow 30s ease-in-out infinite;
+	}
+	
+	.animate-blob-extra {
+		animation: blob-extra 28s ease-in-out infinite;
+	}
+</style>
