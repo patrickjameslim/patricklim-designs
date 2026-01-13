@@ -2,9 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 import TopNav from '../components/TopNav.astro';
 import Footer from '../components/Footer.astro';
-import pageUpMacbook from '../assets/PageUp_Article.svg';
-import pageUpUsability from '../assets/PageUp_UsabilityTest01.png';
-import pageUpKickoff from '../assets/PageUp_Kickoff.png';
+import Caption from '../components/Caption.astro';
+import pageUpMacbook from '../assets/pageup/PageUp_Article.svg';
+import pageUpUsability from '../assets/pageup/PageUp_UsabilityTest01.png';
+import pageUpKickoff from '../assets/pageup/PageUp_Kickoff.png';
+import pageUpProjectStructure from '../assets/pageup/PageUp_ProjectStructure.svg';
+import pageUpShellExploration from '../assets/pageup/PageUp_ShellExploration.png';
+import pageUpShellDetailed from '../assets/pageup/PageUp_ShellDetailed.png';
+import pageUpJobsTable from '../assets/pageup/PageUp_JobsTable.png';
+import pageUpJobCard from '../assets/pageup/PageUp_JobCard.png';
+import pageUpAspirationalFeatures from '../assets/pageup/PageUp_AspirationalFeatures.png';
 ---
 
 <Layout>
@@ -20,7 +27,7 @@ import pageUpKickoff from '../assets/PageUp_Kickoff.png';
 			</div>
 		</section>
 
-		<section class="max-w-[1440px] mx-auto py-16 px-4 space-y-16">
+		<section class="max-w-[1440px] mx-auto py-16 px-4">
 			<!-- Title, subtitle, tags -->
 			<div class="space-y-6">
 				<h1 class="text-4xl font-bold text-slate-900 leading-tight">
@@ -37,7 +44,7 @@ import pageUpKickoff from '../assets/PageUp_Kickoff.png';
 			</div>
 
 			<!-- About -->
-			<div class="space-y-4">
+			<div class="mt-10 space-y-4">
 				<h2 class="text-4xl font-bold text-slate-900">About</h2>
 				<p class="text-xl text-slate-700 leading-relaxed">
 					PageUp is an AI-powered talent acquisition platform designed to streamline hiring and connect people. By leveraging advanced automation, the platform delivers personalized experiences at scale. This case study showcases how a design discovery phase helped redefine the future of one of PageUp's most-used features.
@@ -45,7 +52,7 @@ import pageUpKickoff from '../assets/PageUp_Kickoff.png';
 			</div>
 
 			<!-- Team -->
-			<div class="space-y-4">
+			<div class="mt-10 space-y-4">
 				<h2 class="text-4xl font-bold text-slate-900">Team</h2>
 				<p class="text-xl text-slate-700 leading-relaxed">
 					We are following the product trio model based from <a href="#" class="underline">Teresa Torres' Continuous Discovery Habits</a>.
@@ -63,7 +70,7 @@ import pageUpKickoff from '../assets/PageUp_Kickoff.png';
 			</div>
 
 			<!-- Goals -->
-			<div class="space-y-6">
+			<div class="mt-10 space-y-6">
 				<h2 class="text-4xl font-bold text-slate-900">Goals</h2>
 				<div class="space-y-4">
 					<div>
@@ -83,7 +90,7 @@ import pageUpKickoff from '../assets/PageUp_Kickoff.png';
 			</div>
 
 			<!-- Outcomes -->
-			<div class="space-y-4">
+			<div class="mt-10 space-y-4">
 				<h2 class="text-4xl font-bold text-slate-900">Outcomes</h2>
 				<ul class="space-y-3 text-xl text-slate-700 leading-relaxed">
 					<li class="flex items-center gap-3">
@@ -102,7 +109,7 @@ import pageUpKickoff from '../assets/PageUp_Kickoff.png';
 			</div>
 
 			<!-- User Types -->
-			<div class="space-y-6">
+			<div class="mt-10 space-y-6">
 				<h2 class="text-4xl font-bold text-slate-900">User Types</h2>
 				<div class="grid gap-6 lg:grid-cols-2">
 					<!-- Recruiter Card -->
@@ -146,7 +153,7 @@ import pageUpKickoff from '../assets/PageUp_Kickoff.png';
 			</div>
 
 			<!-- Discovery -->
-			<div class="space-y-6">
+			<div class="mt-10 space-y-6">
 				<h2 class="text-4xl font-bold text-slate-900">Discovery</h2>
 				<p class="text-xl text-slate-700 leading-relaxed">
 					Following an initial Design Sprint with executive leadership to validate the project's scope, I took ownership of the prototyping and assisted with the research phase. I developed the test-ready prototype and processed user feedback into the actionable insights that informed our long-term strategy.
@@ -154,7 +161,7 @@ import pageUpKickoff from '../assets/PageUp_Kickoff.png';
 				
 				<!-- Two images side-by-side -->
 				<div class="grid gap-6 lg:grid-cols-2">
-					<div class="space-y-2">
+					<div class="flex flex-col gap-4">
 						<div class="rounded-xl border border-green-200 bg-green-50 overflow-hidden p-4 aspect-video flex items-center justify-center">
 							<video 
 								src="/PageUp_Demo.mp4" 
@@ -163,8 +170,9 @@ import pageUpKickoff from '../assets/PageUp_Kickoff.png';
 								playsinline
 							></video>
 						</div>
+						<Caption text='Left: <a href="https://www.thesprintbook.com/the-design-sprint" target="_blank" class="underline">Design Sprint</a> prototype.' />
 					</div>
-					<div class="space-y-2">
+					<div class="flex flex-col gap-4">
 						<div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden">
 							<img 
 								src={pageUpUsability.src} 
@@ -172,11 +180,8 @@ import pageUpKickoff from '../assets/PageUp_Kickoff.png';
 								class="w-full h-auto aspect-video object-cover"
 							/>
 						</div>
+						<Caption text='Right: Usability test sessions managed using <a href="https://dovetail.com/" target="_blank" class="underline">Dovetail.</a>' />
 					</div>
-				</div>
-
-				<div class="p-6 text-center">
-					<p class="text-sm text-slate-600">Left: <a href="https://www.thesprintbook.com/the-design-sprint" target="_blank">Design Sprint</a>  prototype. Right: Usability test sessions managed using <a href="https://dovetail.com/" target="_blank">Dovetail.</a></p>
 				</div>
 				
 				<!-- Discovery Insights Box -->
@@ -192,12 +197,122 @@ import pageUpKickoff from '../assets/PageUp_Kickoff.png';
 					In the following months, the project officially began with a kickoff meeting involving the Head of UX, Senior UX Designer, Product Manager, Tech Lead, and UX Operations Manager. Our goal was to ensure cross-functional alignment before diving into execution.
 				</p>
 
-				<img 
-					src={pageUpKickoff.src} 
-					alt="Usability test sessions managed using Dovetail"
-					class="w-full h-auto"
-				/>
+				<div class="flex flex-col gap-4">
+					<img 
+						src={pageUpKickoff.src} 
+						alt="Kickoff meeting"
+						class="w-full h-auto"
+					/>
+					<Caption text="Kickoff meeting with cross-functional team members." />
+				</div>
 			</div>
+
+			<!-- Ideation -->
+			<div class="mt-10 space-y-6">
+				<h2 class="text-4xl font-bold text-slate-900">Ideation</h2>
+				<p class="text-xl text-slate-700 leading-relaxed">
+					Following an initial Design Sprint with executive leadership to validate the project's scope, I took ownership of the prototyping and assisted with the research phase. I developed the test-ready prototype and processed user feedback into the actionable insights that informed our long-term strategy.
+				</p>
+				
+				<div class="flex flex-col gap-4">
+					<img 
+						src={pageUpProjectStructure.src} 
+						alt="Project structure"
+						class="w-full h-auto"
+					/>
+					<Caption text="Project structure and information architecture." />
+				</div>
+
+				<p class="text-xl text-slate-700 leading-relaxed">
+					Following an initial Design Sprint with executive leadership to validate the project's scope, I took ownership of the prototyping and assisted with the research phase. I developed the test-ready prototype and processed user feedback into the actionable insights that informed our long-term strategy.
+				</p>
+
+				<div class="grid gap-6 lg:grid-cols-2">
+					<div class="flex flex-col gap-4">
+						<img 
+							src={pageUpShellExploration.src} 
+							alt="PageUp Shell Exploration"
+							class="w-full h-auto"
+						/>
+						<Caption text='Initial exploration of the PageUp Shell in collaboration with the Product Manager using <a href="https://miro.com/" target="_blank" class="underline">Miro.</a>' />
+					</div>
+					<div class="flex flex-col gap-4">
+						<img 
+							src={pageUpShellDetailed.src} 
+							alt="PageUp Shell Exploration - Closer look"
+							class="w-full h-auto"
+						/>
+						<Caption text='Closer look at the PageUp Shell layouts that I explored using <a href="https://www.figma.com/" target="_blank" class="underline">Figma.</a>' />
+					</div>
+				</div>
+			</div>
+
+			<!-- Design -->
+			<div class="mt-10 space-y-6">
+				<h2 class="text-4xl font-bold text-slate-900">Design</h2>
+				<p class="text-xl text-slate-700 leading-relaxed">
+					I transitioned from ideation to prototyping, creating a flow for usability testing with both primary user types. This prototype centered on the job requisition process, ensuring a seamless collaborative experience for both the Hiring Manager and the Recruiter.
+				</p>
+
+				<div>
+					<h3 class="text-xl font-bold text-slate-900 mb-3">Implementing the persistent Shell structure</h3>
+					<p class="text-xl text-slate-700 leading-relaxed">
+						I moved the primary Jobs navigation into a left-hand Shell structure. This provides users with a constant sense of place within the broader PageUp ecosystem. By anchoring the global navigation to the left, we reclaimed vertical space and allowed the core content to breathe.
+					</p>
+				</div>
+				
+				<div class="flex flex-col gap-4">
+					<img 
+						src={pageUpJobsTable.src} 
+						alt="Redesigned PageUp Jobs Table"
+						class="w-full h-auto"
+					/>
+					<Caption text="Redesigned PageUp Jobs Table" />
+				</div>
+
+				<div>
+					<h3 class="text-xl font-bold text-slate-900 mb-3">Card-Based Architecture & Design System Alignment</h3>
+					<p class="text-xl text-slate-700 leading-relaxed mb-4">
+						Using our current design system, I transitioned the layout from a continuous, overwhelming list of fields to a card-based UI.
+					</p>
+					<ul class="space-y-3 text-xl text-slate-700 leading-relaxed list-disc list-inside mb-6">
+						<li><strong>Information Chunking:</strong> By grouping related fields into logical containers (e.g., 'Recruitment Request'), I reduced the user's cognitive load.</li>
+						<li><strong>Visual Clarity:</strong> I cleaned up the form inputs and alignment, ensuring the interface feels modern, professional, and trustworthy.</li>
+						<li><strong>Persistent Actions:</strong> I optimized the header to keep primary actions, like 'Submit for Approval,' always within reach, removing the need for users to scroll to the bottom of the page to save their work.</li>
+					</ul>
+					<div class="flex flex-col gap-4">
+						<img 
+							src={pageUpJobCard.src} 
+							alt="Card-Based Architecture - New job form"
+							class="w-full h-auto"
+						/>
+						<Caption text="Card-based form design with improved information architecture." />
+					</div>
+				</div>
+			</div>
+
+			<!-- Aspirational Features -->
+			<div class="mt-10 space-y-6">
+				<h2 class="text-4xl font-bold text-slate-900">Aspirational Features</h2>
+				<p class="text-xl text-slate-700 leading-relaxed">
+					To make the best use of our time and as a way to maximize the window of opportunity that we have with our ideas, I also designed the following aspirational features that would be tested with the users:
+				</p>
+				<ol class="space-y-3 text-xl text-slate-700 leading-relaxed list-decimal list-inside">
+					<li><strong>Waffle Menu:</strong> Allow the user to navigate between different PageUp modules.</li>
+					<li><strong>Favorites:</strong> Manage dozens of job requisitions simultaneously.</li>
+					<li><strong>Notifications:</strong> Alerts users to approvals, comments or status changes in real-time.</li>
+					<li><strong>History:</strong> Track user's recent activity to resume their work instantly.</li>
+				</ol>
+				<div class="flex flex-col gap-4">
+					<img 
+						src={pageUpAspirationalFeatures.src} 
+						alt="Aspirational Features UI mockups"
+						class="w-full h-auto"
+					/>
+					<Caption text="Aspirational Features" />
+				</div>
+			</div>
+			
 		</section>
 	</main>
 

@@ -1,5 +1,8 @@
 ---
 import WorkCard from './WorkCard.astro';
+import FigmaCard from './FigmaCard.astro';
+import Skills from './Skills.astro';
+import Process from './Process.astro';
 import pageUpImage from '../assets/PageUp.svg';
 import challongeImage from '../assets/Challonge.svg';
 import twitchImage from '../assets/Twitch.svg';
@@ -16,7 +19,7 @@ import twitchImage from '../assets/Twitch.svg';
 		href="/pageup"
 	/>
 	<WorkCard
-		title="Defining the DNA: Creating a Design System from the Ground Up for Challonge"
+		title="Defining the DNA: Creating a design dystem from the ground Up for Logitech G - Challonge"
 		description="Building a &quot;source of truth&quot; from the ground up. This zero-to-one initiative established Challonge's first foundational design system, delivering a scalable library of tokens and components to align design and engineering teams."
 		tags={["B2B SaaS", "Enterprise Design", "User Research"]}
 		imageSrc={challongeImage.src}
@@ -29,4 +32,13 @@ import twitchImage from '../assets/Twitch.svg';
 		imageSrc={twitchImage.src}
 		imageAlt="Twitch UI Integration Design"
 	/>
+	
+	<!-- Want to see more section -->
+	<div class="mt-16">
+		<h2 class="text-4xl font-bold text-slate-900 mb-8">Want to see more?</h2>
+		<FigmaCard />
+	</div>
+
+	<Skills />
+	<Process />
 </section>
