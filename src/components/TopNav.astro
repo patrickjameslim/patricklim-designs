@@ -2,45 +2,83 @@
 import Logo from '../assets/Logo_Patrick_Lim_Black.svg';
 ---
 
-<nav class="flex sticky top-0 z-50 w-full px-4 py-4 border-b border-gray-200 bg-white/60 backdrop-blur-md">
+<nav class="flex sticky top-0 z-50 w-full px-4 sm:px-6 lg:px-8 py-3 sm:py-4 border-b border-gray-200 bg-white/60 backdrop-blur-md">
     <div class="flex w-full items-center justify-between max-w-[1440px] mx-auto">
-        <a href="/" class="">
-            <div class="flex items-center gap-2 transition hover:opacity-80">
-              <Logo/>
-              <span class="text-xl font-bold tracking-tight text-gray-900">Patrick Lim</span>
-            </div>
-            <div class="flex items-center gap-8">
-                <a href="#work" class="text-sm font-medium text-gray-900 transition hover:text-indigo-600">Work</a>
-                <a href="#about" class="text-sm font-medium text-gray-900 transition hover:text-indigo-600">Skills</a>
-                <a href="#about" class="text-sm font-medium text-gray-900 transition hover:text-indigo-600">Process</a>
-                <a href="/cv.pdf" class="text-sm font-medium text-gray-900 transition hover:text-indigo-600">Download CV</a>
-                
-                <div class="flex items-center gap-4">
-                    <a href="https://www.linkedin.com/in/patrickjameslim/" target="_blank" class="flex items-center gap-2 rounded-lg border bg-white border-gray-200 px-3 py-2 text-sm font-medium transition hover:bg-indigo-600 hover:text-white">
-                        <i class="ri-linkedin-fill"></i>
-                    </a>
-                    <div class="relative">
-                      <button
-                        id="copy-email-btn"
-                        type="button"
-                        class="flex items-center gap-2 rounded-lg border bg-white border-gray-200 px-4 py-2 text-sm font-medium transition hover:bg-indigo-600 hover:text-white"
-                      >
-                        <span class="text-gray-400">
-                          <i class="ri-mail-line"></i>
-                        </span>
-                        patricklim0907@gmail.com
-                      </button>
-                      <div
-                        id="copy-email-toast"
-                        class="absolute left-1/2 top-full mt-2 -translate-x-1/2 translate-y-2 rounded-md bg-slate-900 text-white text-xs px-3 py-1 shadow-sm opacity-0 pointer-events-none transition duration-200 whitespace-nowrap"
-                      >
-                        Copied to clipboard!
-                      </div>
-                    </div>
+        <a href="/" class="flex items-center gap-2 transition hover:opacity-80">
+            <Logo/>
+            <span class="text-lg sm:text-xl font-bold tracking-tight text-gray-900">Patrick Lim</span>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center gap-8">
+            <a href="#work" class="text-sm font-medium text-gray-900 transition hover:text-indigo-600">Work</a>
+            <a href="#skills" class="text-sm font-medium text-gray-900 transition hover:text-indigo-600">Skills</a>
+            <a href="#process" class="text-sm font-medium text-gray-900 transition hover:text-indigo-600">Process</a>
+            <a href="/cv.pdf" class="text-sm font-medium text-gray-900 transition hover:text-indigo-600">Download CV</a>
+            
+            <div class="flex items-center gap-4">
+                <a href="https://www.linkedin.com/in/patrickjameslim/" target="_blank" class="flex items-center gap-2 rounded-lg border bg-white border-gray-200 px-3 py-2 text-sm font-medium transition hover:bg-indigo-600 hover:text-white">
+                    <i class="ri-linkedin-fill"></i>
+                </a>
+                <div class="relative">
+                  <button
+                    id="copy-email-btn"
+                    type="button"
+                    class="flex items-center gap-2 rounded-lg border bg-white border-gray-200 px-4 py-2 text-sm font-medium transition hover:bg-indigo-600 hover:text-white"
+                  >
+                    <span class="text-gray-400">
+                      <i class="ri-mail-line"></i>
+                    </span>
+                    <span class="hidden xl:inline">patricklim0907@gmail.com</span>
+                    <span class="xl:hidden">Email</span>
+                  </button>
+                  <div
+                    id="copy-email-toast"
+                    class="absolute left-1/2 top-full mt-2 -translate-x-1/2 translate-y-2 rounded-md bg-slate-900 text-white text-xs px-3 py-1 shadow-sm opacity-0 pointer-events-none transition duration-200 whitespace-nowrap"
+                  >
+                    Copied to clipboard!
+                  </div>
                 </div>
-                
-              </div>
-          </a>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button
+            id="mobile-menu-btn"
+            type="button"
+            class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg border border-gray-200 bg-white text-gray-900 transition hover:bg-gray-50"
+            aria-label="Toggle menu"
+        >
+            <i id="menu-icon" class="ri-menu-line text-xl"></i>
+            <i id="close-icon" class="ri-close-line text-xl hidden"></i>
+        </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div
+        id="mobile-menu"
+        class="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg opacity-0 pointer-events-none transition-all duration-200 max-h-0 overflow-hidden"
+    >
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 py-4 space-y-4">
+            <a href="#work" class="block text-base font-medium text-gray-900 transition hover:text-indigo-600 py-2">Work</a>
+            <a href="#skills" class="block text-base font-medium text-gray-900 transition hover:text-indigo-600 py-2">Skills</a>
+            <a href="#process" class="block text-base font-medium text-gray-900 transition hover:text-indigo-600 py-2">Process</a>
+            <a href="/cv.pdf" class="block text-base font-medium text-gray-900 transition hover:text-indigo-600 py-2">Download CV</a>
+            
+            <div class="flex items-center gap-3 pt-4 border-t border-gray-200">
+                <a href="https://www.linkedin.com/in/patrickjameslim/" target="_blank" class="flex items-center justify-center w-10 h-10 rounded-lg border border-gray-200 bg-white text-gray-900 transition hover:bg-indigo-600 hover:text-white">
+                    <i class="ri-linkedin-fill"></i>
+                </a>
+                <button
+                    id="mobile-copy-email-btn"
+                    type="button"
+                    class="flex-1 flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium transition hover:bg-indigo-600 hover:text-white"
+                >
+                    <i class="ri-mail-line"></i>
+                    <span>Copy Email</span>
+                </button>
+            </div>
+        </div>
     </div>
 </nav>
 
@@ -49,34 +87,94 @@ import Logo from '../assets/Logo_Patrick_Lim_Black.svg';
     const EMAIL = 'patricklim0907@gmail.com';
 
     window.addEventListener('DOMContentLoaded', () => {
+      // Desktop email copy
       const button = document.getElementById('copy-email-btn');
       const toast = document.getElementById('copy-email-toast');
-
-      if (!button || !toast) return;
+      const mobileButton = document.getElementById('mobile-copy-email-btn');
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
 
       let hideTimeout: number;
 
-      const showToast = () => {
-        toast.classList.remove('opacity-0', 'translate-y-2');
-        toast.classList.add('opacity-100', 'translate-y-0');
+      const showToast = (toastElement: HTMLElement) => {
+        toastElement.classList.remove('opacity-0', 'translate-y-2');
+        toastElement.classList.add('opacity-100', 'translate-y-0');
 
         window.clearTimeout(hideTimeout);
         hideTimeout = window.setTimeout(() => {
-          toast.classList.add('opacity-0', 'translate-y-2');
-          toast.classList.remove('opacity-100', 'translate-y-0');
+          toastElement.classList.add('opacity-0', 'translate-y-2');
+          toastElement.classList.remove('opacity-100', 'translate-y-0');
         }, 1800);
       };
 
-      const copyEmail = async () => {
+      const copyEmail = async (toastElement?: HTMLElement) => {
         try {
           await navigator.clipboard.writeText(EMAIL);
-          showToast();
+          if (toastElement) {
+            showToast(toastElement);
+          }
         } catch (error) {
           console.error('Failed to copy email to clipboard', error);
         }
       };
 
-      button.addEventListener('click', copyEmail);
+      // Desktop email copy
+      if (button && toast) {
+        button.addEventListener('click', () => copyEmail(toast));
+      }
+
+      // Mobile email copy
+      if (mobileButton) {
+        mobileButton.addEventListener('click', () => {
+          copyEmail();
+          // Close mobile menu after copying
+          if (mobileMenu) {
+            toggleMobileMenu();
+          }
+        });
+      }
+
+      // Mobile menu toggle
+      const toggleMobileMenu = () => {
+        if (!mobileMenu || !menuIcon || !closeIcon) return;
+        
+        const isOpen = !mobileMenu.classList.contains('opacity-0');
+        
+        if (isOpen) {
+          // Close menu
+          mobileMenu.classList.add('opacity-0', 'pointer-events-none', 'max-h-0');
+          mobileMenu.classList.remove('max-h-screen');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        } else {
+          // Open menu
+          mobileMenu.classList.remove('opacity-0', 'pointer-events-none', 'max-h-0');
+          mobileMenu.classList.add('max-h-screen');
+          menuIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+        }
+      };
+
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+      }
+
+      // Close mobile menu when clicking on a link
+      if (mobileMenu) {
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (mobileMenu && menuIcon && closeIcon) {
+              mobileMenu.classList.add('opacity-0', 'pointer-events-none', 'max-h-0');
+              mobileMenu.classList.remove('max-h-screen');
+              menuIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+            }
+          });
+        });
+      }
     });
   }
 </script>
