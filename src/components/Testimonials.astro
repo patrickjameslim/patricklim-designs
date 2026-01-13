@@ -1,0 +1,264 @@
+---
+import joshAvatar from '../assets/testimonial_josh.jpg';
+import manseeAvatar from '../assets/testimonial_mansee.jpg';
+import davidAvatar from '../assets/testimonial_david.jpg';
+
+interface Testimonial {
+	name: string;
+	title: string;
+	company: string;
+	text: string;
+	imageSrc?: string;
+}
+
+const testimonials: Testimonial[] = [
+	{
+		name: "Josh Dyson",
+		title: "VP of Design",
+		company: "Marketplacer",
+		text: "Patrick brought an exceptional skill set and depth of expertise to Marketplacer, consistently adding meaningful value across multiple areas of the business. He is a true professional, highly capable, engaged and reliable. Patrick excels in stakeholder management and brings a warm, charismatic presence to user research, enabling him to build trust quickly and extract genuine insights. His strong eye for detail, design thinking capacity and ability to connect strategy with execution made him an invaluable contributor to every squad he worked with.",
+		imageSrc: joshAvatar.src,
+	},
+	{
+		name: "Mansee Sheth",
+		title: "Product Manager",
+		company: "Marketplacer",
+		text: "Taniya's work is defined by her exceptional attention to detail and keen eye for aesthetics and usability. She never settles for the minimum and consistently goes beyond her assignments to propose innovative ideas and fantastic suggestions that have significantly improved our projects.",
+		imageSrc: manseeAvatar.src,
+	},{
+		name: "David Misfeld",
+		title: "Senior Experience Designer",
+		company: "PageUp",
+		text: "I had the pleasure of working alongside Patrick on several product design projects for our SaaS software, and I was consistently impressed by his expertise and adaptability. Patrick is a fast learner who quickly integrated himself into new projects and teams, contributing valuable insights from the start. His deep understanding of Design Thinking and ability to apply it practically to solve complex SaaS challenges made him an indispensable part of our design process. Patrick also demonstrated a strong command of Design Systems, with significant knowledge of front-end code that allowed him to collaborate seamlessly with development teams. Patrick's UI design skills are outstanding, and he consistently delivered screen designs that were not only visually appealing but also aligned perfectly with our users' needs and Jobs-to-be-Done. I highly recommend Patrick for any UXUI design role - he's a talented designer and a fantastic team player.",
+		imageSrc: davidAvatar.src,
+	},
+	// Add more testimonials here as needed
+];
+---
+
+<section id="testimonials" class="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+	<h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-8 sm:mb-12">Testimonials</h2>
+	
+	<div class="relative">
+		<!-- Carousel Container -->
+		<div class="overflow-hidden">
+			<div 
+				id="testimonials-carousel"
+				class="flex transition-transform duration-500 ease-in-out"
+				style="transform: translateX(0);"
+			>
+				{testimonials.map((testimonial, index) => (
+					<div 
+						class="min-w-full md:min-w-[50%] px-2 sm:px-4"
+						data-index={index}
+					>
+						<div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm max-w-[600px] mx-auto">
+							<div class="flex items-start gap-4 sm:gap-6 mb-4 sm:mb-6">
+								<!-- Profile Picture -->
+								<div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-slate-200 shrink-0 flex items-center justify-center overflow-hidden">
+									{testimonial.imageSrc ? (
+										<img 
+											src={testimonial.imageSrc} 
+											alt={testimonial.name}
+											class="w-full h-full object-cover"
+										/>
+									) : (
+										<div class="w-full h-full bg-slate-300"></div>
+									)}
+								</div>
+								
+								<!-- Name and Title -->
+								<div class="flex-1 min-w-0">
+									<h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-1">
+										{testimonial.name}
+									</h3>
+									<p class="text-sm sm:text-base text-slate-600">
+										{testimonial.title} @ {testimonial.company}
+									</p>
+								</div>
+							</div>
+							
+							<!-- Testimonial Text -->
+							<blockquote class="text-base sm:text-lg text-slate-700 leading-relaxed">
+								"{testimonial.text}"
+							</blockquote>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+		
+		<!-- Navigation Arrows -->
+		{testimonials.length > 1 && (
+			<>
+				<button
+					id="testimonials-prev"
+					type="button"
+					class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-6 lg:-translate-x-8 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border border-slate-200 shadow-lg flex items-center justify-center text-slate-700 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+					aria-label="Previous testimonial"
+				>
+					<i class="ri-arrow-left-line text-xl sm:text-2xl"></i>
+				</button>
+				
+				<button
+					id="testimonials-next"
+					type="button"
+					class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-6 lg:translate-x-8 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border border-slate-200 shadow-lg flex items-center justify-center text-slate-700 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+					aria-label="Next testimonial"
+				>
+					<i class="ri-arrow-right-line text-xl sm:text-2xl"></i>
+				</button>
+			</>
+		)}
+		
+		<!-- Dots Indicator -->
+		{testimonials.length > 1 && (
+			<div class="flex justify-center gap-2 mt-6 sm:mt-8">
+				{Array.from({ length: Math.ceil(testimonials.length / 2) }).map((_, index) => (
+					<button
+						type="button"
+						class="testimonial-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-200 hover:bg-indigo-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+						data-index={index}
+						aria-label={`Go to testimonial group ${index + 1}`}
+					></button>
+				))}
+			</div>
+		)}
+	</div>
+</section>
+
+<script>
+	if (typeof window !== 'undefined') {
+		window.addEventListener('DOMContentLoaded', () => {
+			const carousel = document.getElementById('testimonials-carousel');
+			const prevButton = document.getElementById('testimonials-prev');
+			const nextButton = document.getElementById('testimonials-next');
+			const dots = document.querySelectorAll('.testimonial-dot');
+			
+			if (!carousel) return;
+			
+			const testimonials = carousel.querySelectorAll('[data-index]');
+			if (testimonials.length <= 1) return;
+			
+			let currentIndex = 0;
+			
+			// Check if we're on mobile (showing 1 card) or desktop (showing 2 cards)
+			const getCardsPerView = (): number => {
+				return window.innerWidth >= 768 ? 2 : 1;
+			};
+			
+			const getMaxIndex = (): number => {
+				const cardsPerView = getCardsPerView();
+				return Math.max(0, testimonials.length - cardsPerView);
+			};
+			
+			const updateCarousel = () => {
+				const cardsPerView = getCardsPerView();
+				const translateX = -(currentIndex * (100 / cardsPerView));
+				carousel.style.transform = `translateX(${translateX}%)`;
+				
+				// Update dots - show dots for each pair on desktop, each card on mobile
+				const dotsPerView = cardsPerView === 2 ? 2 : 1;
+				const totalDots = Math.ceil(testimonials.length / dotsPerView);
+				const activeDotIndex = Math.floor(currentIndex / dotsPerView);
+				
+				dots.forEach((dot, index) => {
+					if (index === activeDotIndex && index < totalDots) {
+						dot.classList.add('bg-indigo-600', 'w-8');
+						dot.classList.remove('bg-slate-300', 'w-2');
+					} else {
+						dot.classList.add('bg-slate-300', 'w-2');
+						dot.classList.remove('bg-indigo-600', 'w-8');
+					}
+				});
+			};
+			
+			const goToSlide = (index: number) => {
+				currentIndex = index;
+				const maxIndex = getMaxIndex();
+				
+				if (currentIndex < 0) {
+					currentIndex = maxIndex;
+				} else if (currentIndex > maxIndex) {
+					currentIndex = 0;
+				}
+				updateCarousel();
+			};
+			
+			const nextSlide = () => {
+				const cardsPerView = getCardsPerView();
+				goToSlide(currentIndex + cardsPerView);
+			};
+			
+			const prevSlide = () => {
+				const cardsPerView = getCardsPerView();
+				goToSlide(currentIndex - cardsPerView);
+			};
+			
+			// Button event listeners
+			if (nextButton) {
+				nextButton.addEventListener('click', nextSlide);
+			}
+			
+			if (prevButton) {
+				prevButton.addEventListener('click', prevSlide);
+			}
+			
+			// Dot event listeners
+			dots.forEach((dot, index) => {
+				dot.addEventListener('click', () => {
+					const cardsPerView = getCardsPerView();
+					goToSlide(index * cardsPerView);
+				});
+			});
+			
+			// Keyboard navigation
+			carousel.addEventListener('keydown', (e: KeyboardEvent) => {
+				if (e.key === 'ArrowLeft') {
+					prevSlide();
+				} else if (e.key === 'ArrowRight') {
+					nextSlide();
+				}
+			});
+			
+			// Handle window resize
+			let resizeTimeout: number;
+			window.addEventListener('resize', () => {
+				window.clearTimeout(resizeTimeout);
+				resizeTimeout = window.setTimeout(() => {
+					const maxIndex = getMaxIndex();
+					if (currentIndex > maxIndex) {
+						currentIndex = maxIndex;
+					}
+					updateCarousel();
+				}, 150);
+			});
+			
+			// Initialize
+			updateCarousel();
+			
+			// Auto-play (optional - uncomment if desired)
+			// let autoPlayInterval: number;
+			// const startAutoPlay = () => {
+			// 	autoPlayInterval = window.setInterval(nextSlide, 5000);
+			// };
+			// const stopAutoPlay = () => {
+			// 	window.clearInterval(autoPlayInterval);
+			// };
+			// startAutoPlay();
+			// carousel.addEventListener('mouseenter', stopAutoPlay);
+			// carousel.addEventListener('mouseleave', startAutoPlay);
+		});
+	}
+</script>
+
+<style>
+	#testimonials-carousel {
+		display: flex;
+	}
+	
+	#testimonials-carousel > div {
+		flex-shrink: 0;
+	}
+</style>
+
