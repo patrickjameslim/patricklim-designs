@@ -1,0 +1,448 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TopNav from '../components/TopNav.astro';
+import Footer from '../components/Footer.astro';
+import Caption from '../components/Caption.astro';
+import challongeHeader from '../assets/challonge/Challonge_Header.svg';
+---
+
+<Layout>
+	<TopNav />
+
+	<main class="bg-white" style="font-family: 'TikTok Sans', sans-serif;">
+		<section class="relative overflow-hidden border-b border-slate-100 bg-white">
+			<!-- Hero gradient band with UI screenshots -->
+			<div class="w-full bg-linear-to-r from-emerald-100 via-slate-50 to-rose-100">
+				<div class="max-w-[1440px] mx-auto py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
+					<!-- Placeholder for hero UI screenshots -->
+					<img 
+							src={challongeHeader.src} 
+							alt="Card-Based Architecture - New job form"
+							class="w-full h-auto relative bottom-[-124px]"
+						/>
+				</div>
+			</div>
+		</section>
+
+		<section class="max-w-[1440px] mx-auto py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+			<!-- Title, subtitle, tags -->
+			<div class="space-y-4 sm:space-y-6">
+				<h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 leading-tight">
+					Creating the foundations of a design system on Challonge
+				</h1>
+				<p class="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed">
+					Providing professional and consistent UI/UX across our platform, while empowering our team to build beautiful and accessible experiences.
+				</p>
+				<div class="flex flex-wrap items-center gap-2 sm:gap-3">
+					<span class="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-100 text-slate-700 text-xs sm:text-sm font-medium">B2B SaaS</span>
+					<span class="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-100 text-slate-700 text-xs sm:text-sm font-medium">Enterprise Design</span>
+					<span class="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-100 text-slate-700 text-xs sm:text-sm font-medium">Design Systems</span>
+				</div>
+				<div class="flex flex-wrap items-center gap-4 text-sm sm:text-base text-slate-600">
+					<span><strong>Role:</strong> Product Designer, UI/UX Designer, Design System Lead</span>
+					<span><strong>Duration:</strong> 6 months</span>
+				</div>
+			</div>
+
+			<!-- About -->
+			<div class="mt-8 sm:mt-10 space-y-3 sm:space-y-4">
+				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">About</h2>
+				<p class="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed">
+					This project focused on building a comprehensive design system for Challonge, a tournament platform, to improve UI/UX consistency and empower the team to create beautiful and accessible experiences. The design system serves as the foundation for maintaining a unified look and feel across the platform while streamlining design and development workflows.
+				</p>
+			</div>
+
+			<!-- Team -->
+			<div class="mt-8 sm:mt-10 space-y-3 sm:space-y-4">
+				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">Team</h2>
+				<ul class="space-y-2 sm:space-y-3 text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed">
+					<li class="flex items-start gap-2 sm:gap-3">
+						<span class="text-indigo-400 text-lg sm:text-xl mt-1 shrink-0"><i class="ri-user-line"></i></span>
+						<span>Product Designer, UI/UX Designer, Design System Lead</span>
+					</li>
+					<li class="flex items-start gap-2 sm:gap-3">
+						<span class="text-indigo-400 text-lg sm:text-xl mt-1 shrink-0"><i class="ri-user-line"></i></span>
+						<span>Software Engineer, Frontend Lead</span>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Goals -->
+			<div class="mt-8 sm:mt-10 space-y-4 sm:space-y-6">
+				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">Goals</h2>
+				<div class="grid gap-4 sm:gap-6 lg:grid-cols-2">
+					<div class="p-4 sm:p-6 rounded-xl bg-blue-50 border border-blue-100 space-y-3 sm:space-y-4">
+						<div class="flex items-center gap-3 mb-2">
+							<span class="text-2xl text-indigo-600"><i class="ri-palette-line"></i></span>
+							<h3 class="text-lg sm:text-xl font-bold text-slate-900">1. Consistency</h3>
+						</div>
+						<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+							Ensuring a unified look and feel across the entire Challonge platform, creating a cohesive user experience that reflects our brand identity and design principles.
+						</p>
+					</div>
+					<div class="p-4 sm:p-6 rounded-xl bg-blue-50 border border-blue-100 space-y-3 sm:space-y-4">
+						<div class="flex items-center gap-3 mb-2">
+							<span class="text-2xl text-indigo-600"><i class="ri-speed-up-line"></i></span>
+							<h3 class="text-lg sm:text-xl font-bold text-slate-900">2. Efficiency</h3>
+						</div>
+						<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+							Streamlining design and development workflows by providing reusable components and clear guidelines, reducing time spent on repetitive tasks and decision-making.
+						</p>
+					</div>
+					<div class="p-4 sm:p-6 rounded-xl bg-blue-50 border border-blue-100 space-y-3 sm:space-y-4">
+						<div class="flex items-center gap-3 mb-2">
+							<span class="text-2xl text-indigo-600"><i class="ri-expand-left-right-line"></i></span>
+							<h3 class="text-lg sm:text-xl font-bold text-slate-900">3. Scalability</h3>
+						</div>
+						<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+							Supporting future growth and new features by establishing a flexible and extensible design system that can adapt to evolving product needs.
+						</p>
+					</div>
+					<div class="p-4 sm:p-6 rounded-xl bg-blue-50 border border-blue-100 space-y-3 sm:space-y-4">
+						<div class="flex items-center gap-3 mb-2">
+							<span class="text-2xl text-indigo-600"><i class="ri-eye-line"></i></span>
+							<h3 class="text-lg sm:text-xl font-bold text-slate-900">4. Accessibility</h3>
+						</div>
+						<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+							Making the platform usable for everyone by incorporating accessibility best practices and WCAG guidelines into every component and pattern.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Constraints -->
+			<div class="mt-8 sm:mt-10 space-y-4 sm:space-y-6">
+				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">Constraints</h2>
+				<div class="grid gap-4 sm:gap-6 lg:grid-cols-2">
+					<div class="p-4 sm:p-6 rounded-xl bg-amber-50 border border-amber-100 space-y-3 sm:space-y-4">
+						<div class="flex items-center gap-3 mb-2">
+							<span class="text-2xl text-amber-600"><i class="ri-time-line"></i></span>
+							<h3 class="text-lg sm:text-xl font-bold text-slate-900">1. Time</h3>
+						</div>
+						<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+							Limited timeframe for implementation required careful prioritization and phased rollout of design system components.
+						</p>
+					</div>
+					<div class="p-4 sm:p-6 rounded-xl bg-amber-50 border border-amber-100 space-y-3 sm:space-y-4">
+						<div class="flex items-center gap-3 mb-2">
+							<span class="text-2xl text-amber-600"><i class="ri-team-line"></i></span>
+							<h3 class="text-lg sm:text-xl font-bold text-slate-900">2. Resources</h3>
+						</div>
+						<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+							Constraints on available personnel and tools necessitated efficient resource allocation and strategic tool selection.
+						</p>
+					</div>
+					<div class="p-4 sm:p-6 rounded-xl bg-amber-50 border border-amber-100 space-y-3 sm:space-y-4">
+						<div class="flex items-center gap-3 mb-2">
+							<span class="text-2xl text-amber-600"><i class="ri-code-s-slash-line"></i></span>
+							<h3 class="text-lg sm:text-xl font-bold text-slate-900">3. Legacy Code</h3>
+						</div>
+						<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+							Challenges integrating with existing codebase required careful migration strategies and backward compatibility considerations.
+						</p>
+					</div>
+					<div class="p-4 sm:p-6 rounded-xl bg-amber-50 border border-amber-100 space-y-3 sm:space-y-4">
+						<div class="flex items-center gap-3 mb-2">
+							<span class="text-2xl text-amber-600"><i class="ri-file-warning-line"></i></span>
+							<h3 class="text-lg sm:text-xl font-bold text-slate-900">4. Technical Debt</h3>
+						</div>
+						<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+							Addressing existing technical issues while building new components required balancing refactoring efforts with new feature development.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Technology -->
+			<div class="mt-8 sm:mt-10 space-y-4 sm:space-y-6">
+				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">Technology</h2>
+				<div class="flex flex-wrap items-center gap-6 sm:gap-8">
+					<div class="flex flex-col items-center gap-2">
+						<div class="w-16 h-16 sm:w-20 sm:h-20 bg-blue-100 rounded-lg flex items-center justify-center">
+							<span class="text-2xl sm:text-3xl">⚛️</span>
+						</div>
+						<span class="text-sm sm:text-base text-slate-700 font-medium">React</span>
+					</div>
+					<div class="flex flex-col items-center gap-2">
+						<div class="w-16 h-16 sm:w-20 sm:h-20 bg-blue-100 rounded-lg flex items-center justify-center">
+							<span class="text-sm sm:text-base font-bold text-blue-600">TS</span>
+						</div>
+						<span class="text-sm sm:text-base text-slate-700 font-medium">TypeScript</span>
+					</div>
+					<div class="flex flex-col items-center gap-2">
+						<div class="w-16 h-16 sm:w-20 sm:h-20 bg-green-100 rounded-lg flex items-center justify-center">
+							<span class="text-xl sm:text-2xl">⚡</span>
+						</div>
+						<span class="text-sm sm:text-base text-slate-700 font-medium">GraphQL</span>
+					</div>
+					<div class="flex flex-col items-center gap-2">
+						<div class="w-16 h-16 sm:w-20 sm:h-20 bg-pink-100 rounded-lg flex items-center justify-center">
+							<span class="text-sm sm:text-base font-bold text-pink-600">S</span>
+						</div>
+						<span class="text-sm sm:text-base text-slate-700 font-medium">Storybook</span>
+					</div>
+					<div class="flex flex-col items-center gap-2">
+						<div class="w-16 h-16 sm:w-20 sm:h-20 bg-pink-100 rounded-lg flex items-center justify-center">
+							<span class="text-sm sm:text-base font-bold text-pink-600">F</span>
+						</div>
+						<span class="text-sm sm:text-base text-slate-700 font-medium">Figma</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Discovery -->
+			<div class="mt-8 sm:mt-10 space-y-4 sm:space-y-6">
+				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">Discovery</h2>
+				<p class="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed">
+					The discovery phase involved comprehensive user research, competitive analysis, and identifying key pain points in the current platform. Through user interviews, surveys, and feedback collection, we gained valuable insights into user needs and expectations.
+				</p>
+				<p class="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed">
+					Competitive analysis of similar platforms helped us understand industry standards and identify opportunities for differentiation. This research informed our design decisions and ensured the design system would address real user needs.
+				</p>
+				
+				<!-- Two images side-by-side -->
+				<div class="grid gap-4 sm:gap-6 lg:grid-cols-2">
+					<div class="flex flex-col gap-3 sm:gap-4">
+						<div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden aspect-video flex items-center justify-center">
+							<span class="text-slate-500 text-sm">Discovery Meeting Placeholder</span>
+						</div>
+						<Caption text="Discovery meeting with team members." />
+					</div>
+					<div class="flex flex-col gap-3 sm:gap-4">
+						<div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden aspect-video flex items-center justify-center">
+							<span class="text-slate-500 text-sm">UI Screenshot Placeholder</span>
+						</div>
+						<Caption text="Current platform UI analysis." />
+					</div>
+				</div>
+				
+				<!-- Feedback Section -->
+				<div class="grid gap-4 sm:gap-6 lg:grid-cols-2 mt-6">
+					<div class="p-4 sm:p-6 rounded-xl bg-slate-50 border border-slate-200">
+						<p class="text-sm sm:text-base text-slate-600 mb-2">Feedback by lead product manager</p>
+						<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+							The design system will be crucial for maintaining consistency as we scale. We need to ensure it's flexible enough to accommodate future features while maintaining our brand identity.
+						</p>
+					</div>
+					<div class="p-4 sm:p-6 rounded-xl bg-slate-50 border border-slate-200">
+						<div class="flex items-center gap-3 mb-3">
+							<div class="w-10 h-10 rounded-full bg-slate-300"></div>
+							<div>
+								<p class="text-sm sm:text-base font-semibold text-slate-900">Mark J.</p>
+								<p class="text-xs sm:text-sm text-slate-600">Product Manager</p>
+							</div>
+						</div>
+						<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+							This initiative will significantly improve our development velocity and design consistency across the platform.
+						</p>
+					</div>
+				</div>
+
+				<!-- User Interviews & Surveys -->
+				<div class="mt-6">
+					<h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-4 sm:mb-6">User Interviews & Surveys</h3>
+					<div class="grid gap-4 sm:gap-6 lg:grid-cols-3">
+						<div class="p-4 sm:p-6 rounded-xl bg-indigo-50 border border-indigo-100">
+							<div class="text-3xl text-indigo-600 mb-3">
+								<i class="ri-user-line"></i>
+							</div>
+							<h4 class="text-lg sm:text-xl font-bold text-slate-900 mb-2">User Pain Points</h4>
+							<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+								Identified key usability issues and areas where the current UI/UX falls short of user expectations.
+							</p>
+						</div>
+						<div class="p-4 sm:p-6 rounded-xl bg-indigo-50 border border-indigo-100">
+							<div class="text-3xl text-indigo-600 mb-3">
+								<i class="ri-search-line"></i>
+							</div>
+							<h4 class="text-lg sm:text-xl font-bold text-slate-900 mb-2">Feature Requests</h4>
+							<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+								Collected and analyzed user requests for new features and improvements to existing functionality.
+							</p>
+						</div>
+						<div class="p-4 sm:p-6 rounded-xl bg-indigo-50 border border-indigo-100">
+							<div class="text-3xl text-indigo-600 mb-3">
+								<i class="ri-focus-3-line"></i>
+							</div>
+							<h4 class="text-lg sm:text-xl font-bold text-slate-900 mb-2">User Goals</h4>
+							<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+								Understood primary user objectives and how the design system can better support their workflows.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Competitive Analysis -->
+				<div class="mt-6">
+					<h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3 sm:mb-4">Competitive Analysis</h3>
+					<p class="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed mb-4">
+						We analyzed competitor platforms to understand industry standards, identify best practices, and find opportunities for differentiation. This research helped inform our design decisions and ensure we're building a design system that meets modern user expectations.
+					</p>
+					<div class="flex flex-col gap-3 sm:gap-4">
+						<div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden aspect-video flex items-center justify-center">
+							<span class="text-slate-500 text-sm">Competitive Analysis UI Grid Placeholder</span>
+						</div>
+						<Caption text="Competitive analysis of design patterns and UI components." />
+					</div>
+				</div>
+			</div>
+
+			<!-- Design -->
+			<div class="mt-8 sm:mt-10 space-y-4 sm:space-y-6">
+				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">Design</h2>
+				<p class="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed">
+					The design process focused on creating a cohesive visual language and a comprehensive component library. We established design tokens, defined typography scales, color systems, and spacing guidelines that would serve as the foundation for all UI components.
+				</p>
+
+				<!-- Visual Language -->
+				<div class="mt-6">
+					<h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-4 sm:mb-6">Visual Language</h3>
+					<div class="grid gap-4 sm:gap-6 lg:grid-cols-3">
+						<div class="p-4 sm:p-6 rounded-xl bg-purple-50 border border-purple-100">
+							<div class="text-3xl text-purple-600 mb-3">
+								<i class="ri-palette-line"></i>
+							</div>
+							<h4 class="text-lg sm:text-xl font-bold text-slate-900 mb-2">Color Palette</h4>
+							<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+								Established a comprehensive color system with primary, secondary, and semantic colors that support both light and dark themes.
+							</p>
+						</div>
+						<div class="p-4 sm:p-6 rounded-xl bg-purple-50 border border-purple-100">
+							<div class="text-3xl text-purple-600 mb-3">
+								<i class="ri-font-size-2"></i>
+							</div>
+							<h4 class="text-lg sm:text-xl font-bold text-slate-900 mb-2">Typography</h4>
+							<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+								Defined a typographic scale with clear hierarchy, ensuring readability and consistency across all text elements.
+							</p>
+						</div>
+						<div class="p-4 sm:p-6 rounded-xl bg-purple-50 border border-purple-100">
+							<div class="text-3xl text-purple-600 mb-3">
+								<i class="ri-layout-grid-line"></i>
+							</div>
+							<h4 class="text-lg sm:text-xl font-bold text-slate-900 mb-2">Layout & Spacing</h4>
+							<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+								Created a consistent spacing system and layout guidelines that ensure visual harmony and proper content organization.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Component Library -->
+				<div class="mt-6">
+					<h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3 sm:mb-4">Component Library</h3>
+					<p class="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed mb-4">
+						We developed a comprehensive library of reusable UI components, each designed with accessibility, consistency, and flexibility in mind. Components were built to work seamlessly together while maintaining their individual functionality.
+					</p>
+					<div class="flex flex-col gap-3 sm:gap-4">
+						<div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden aspect-video flex items-center justify-center">
+							<span class="text-slate-500 text-sm">Component Library Dashboard Placeholder</span>
+						</div>
+						<Caption text="Component library dashboard showcasing reusable UI components." />
+					</div>
+				</div>
+
+				<!-- Design System Documentation -->
+				<div class="mt-6">
+					<h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3 sm:mb-4">Design System Documentation</h3>
+					<p class="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed mb-4">
+						Comprehensive documentation was created to ensure the design system is easily accessible and understandable for all team members. This includes usage guidelines, code examples, design specifications, and best practices for each component.
+					</p>
+					<div class="flex flex-col gap-3 sm:gap-4">
+						<div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden aspect-video flex items-center justify-center">
+							<span class="text-slate-500 text-sm">Design System Documentation Placeholder</span>
+						</div>
+						<Caption text="Design system documentation interface showing component specifications and guidelines." />
+					</div>
+				</div>
+			</div>
+
+			<!-- Showcase -->
+			<div class="mt-8 sm:mt-10 space-y-4 sm:space-y-6">
+				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">Showcase</h2>
+				<p class="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed">
+					The design system in action across various screens and components, demonstrating how the unified design language creates a cohesive and professional user experience throughout the Challonge platform.
+				</p>
+
+				<!-- UI Screenshots Grid -->
+				<div class="grid gap-4 sm:gap-6 lg:grid-cols-2">
+					<div class="flex flex-col gap-3 sm:gap-4">
+						<div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden aspect-video flex items-center justify-center">
+							<span class="text-slate-500 text-sm">Game List Screen Placeholder</span>
+						</div>
+						<Caption text="Game List screen showcasing the design system." />
+					</div>
+					<div class="flex flex-col gap-3 sm:gap-4">
+						<div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden aspect-video flex items-center justify-center">
+							<span class="text-slate-500 text-sm">Upcoming Matches Screen Placeholder</span>
+						</div>
+						<Caption text="Upcoming Matches screen with consistent design patterns." />
+					</div>
+					<div class="flex flex-col gap-3 sm:gap-4">
+						<div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden aspect-video flex items-center justify-center">
+							<span class="text-slate-500 text-sm">User Settings Screen Placeholder</span>
+						</div>
+						<Caption text="User Settings screen demonstrating form components." />
+					</div>
+					<div class="flex flex-col gap-3 sm:gap-4">
+						<div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden aspect-video flex items-center justify-center">
+							<span class="text-slate-500 text-sm">Profile Screen Placeholder</span>
+						</div>
+						<Caption text="Profile screen with user information and statistics." />
+					</div>
+				</div>
+
+				<!-- Additional Screenshots -->
+				<div class="grid gap-4 sm:gap-6 lg:grid-cols-2">
+					<div class="flex flex-col gap-3 sm:gap-4">
+						<div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden aspect-video flex items-center justify-center">
+							<span class="text-slate-500 text-sm">UI Components Collection Placeholder</span>
+						</div>
+						<Caption text="Collection of UI components and elements." />
+					</div>
+					<div class="flex flex-col gap-3 sm:gap-4">
+						<div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden aspect-video flex items-center justify-center">
+							<span class="text-slate-500 text-sm">Game Entries List Placeholder</span>
+						</div>
+						<Caption text="Game entries list with detailed information." />
+					</div>
+				</div>
+
+				<!-- Text Input Showcase -->
+				<div class="flex flex-col gap-3 sm:gap-4">
+					<div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden aspect-video flex items-center justify-center">
+						<span class="text-slate-500 text-sm">Text Input Components Showcase Placeholder</span>
+					</div>
+					<Caption text="Text input components in various states and configurations." />
+				</div>
+
+				<!-- Component Library Showcase -->
+				<div class="flex flex-col gap-3 sm:gap-4">
+					<div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden aspect-video flex items-center justify-center">
+						<span class="text-slate-500 text-sm">Component Library Interface Placeholder</span>
+					</div>
+					<Caption text="Complete component library interface with all UI components and their properties." />
+				</div>
+			</div>
+
+			<!-- Closing Section -->
+			<div class="mt-12 sm:mt-16 lg:mt-20 py-12 sm:py-16 lg:py-20 text-center px-4">
+				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">Thank you for reading</h2>
+				<p class="text-base sm:text-lg lg:text-xl text-slate-600 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
+					This case study showcases the design process behind creating Challonge's foundational design system. If you'd like to see more of my work, feel free to explore other projects.
+				</p>
+				<a 
+					href="/" 
+					class="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base text-white font-medium transition hover:bg-indigo-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+				>
+					<i class="ri-arrow-left-line"></i>
+					Back to Home
+				</a>
+			</div>
+			
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
