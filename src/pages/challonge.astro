@@ -4,6 +4,13 @@ import TopNav from '../components/TopNav.astro';
 import Footer from '../components/Footer.astro';
 import Caption from '../components/Caption.astro';
 import challongeHeader from '../assets/challonge/Challonge_Header.svg';
+import reactLogo from '../assets/challonge/react.svg';
+import typescriptLogo from '../assets/challonge/typescript.svg';
+import graphqlLogo from '../assets/challonge/graphql.svg';
+import storybookLogo from '../assets/challonge/storybook.svg';
+import nextjslogo from '../assets/challonge/nextjs.svg';
+import discoveryOne from '../assets/challonge/discovery01.png';
+import discoveryTwo from '../assets/challonge/discovery02.png';
 ---
 
 <Layout>
@@ -34,13 +41,9 @@ import challongeHeader from '../assets/challonge/Challonge_Header.svg';
 					Providing professional and consistent UI/UX across our platform, while empowering our team to build beautiful and accessible experiences.
 				</p>
 				<div class="flex flex-wrap items-center gap-2 sm:gap-3">
-					<span class="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-100 text-slate-700 text-xs sm:text-sm font-medium">B2B SaaS</span>
-					<span class="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-100 text-slate-700 text-xs sm:text-sm font-medium">Enterprise Design</span>
-					<span class="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-100 text-slate-700 text-xs sm:text-sm font-medium">Design Systems</span>
-				</div>
-				<div class="flex flex-wrap items-center gap-4 text-sm sm:text-base text-slate-600">
-					<span><strong>Role:</strong> Product Designer, UI/UX Designer, Design System Lead</span>
-					<span><strong>Duration:</strong> 6 months</span>
+					<span class="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-100 text-slate-700 text-xs sm:text-sm font-medium">B2C SaaS</span>
+					<span class="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-100 text-slate-700 text-xs sm:text-sm font-medium">Design System</span>
+					<span class="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-100 text-slate-700 text-xs sm:text-sm font-medium">Project Management</span>
 				</div>
 			</div>
 
@@ -48,7 +51,7 @@ import challongeHeader from '../assets/challonge/Challonge_Header.svg';
 			<div class="mt-8 sm:mt-10 space-y-3 sm:space-y-4">
 				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">About</h2>
 				<p class="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed">
-					This project focused on building a comprehensive design system for Challonge, a tournament platform, to improve UI/UX consistency and empower the team to create beautiful and accessible experiences. The design system serves as the foundation for maintaining a unified look and feel across the platform while streamlining design and development workflows.
+					This project focused on building a comprehensive design system for Challonge, a tournament management platform, to improve UI/UX consistency and empower the team to create consistent and reusable experiences. The design system serves as the foundation for maintaining a unified look and feel across the platform while streamlining design and development workflows.
 				</p>
 			</div>
 
@@ -58,54 +61,84 @@ import challongeHeader from '../assets/challonge/Challonge_Header.svg';
 				<ul class="space-y-2 sm:space-y-3 text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed">
 					<li class="flex items-start gap-2 sm:gap-3">
 						<span class="text-indigo-400 text-lg sm:text-xl mt-1 shrink-0"><i class="ri-user-line"></i></span>
-						<span>Product Designer, UI/UX Designer, Design System Lead</span>
+						<span>1 Product Designer</span>
 					</li>
 					<li class="flex items-start gap-2 sm:gap-3">
 						<span class="text-indigo-400 text-lg sm:text-xl mt-1 shrink-0"><i class="ri-user-line"></i></span>
-						<span>Software Engineer, Frontend Lead</span>
+						<span>6 software developers, 1 QA, 1 tech lead, 2 product owners</span>
 					</li>
 				</ul>
 			</div>
 
 			<!-- Goals -->
-			<div class="mt-8 sm:mt-10 space-y-4 sm:space-y-6">
+			<div class="mt-8 sm:mt-10 space-y-6 sm:space-y-8">
 				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">Goals</h2>
-				<div class="grid gap-4 sm:gap-6 lg:grid-cols-2">
-					<div class="p-4 sm:p-6 rounded-xl bg-blue-50 border border-blue-100 space-y-3 sm:space-y-4">
-						<div class="flex items-center gap-3 mb-2">
-							<span class="text-2xl text-indigo-600"><i class="ri-palette-line"></i></span>
-							<h3 class="text-lg sm:text-xl font-bold text-slate-900">1. Consistency</h3>
+				
+				<!-- Design Goals -->
+				<div class="space-y-4 sm:space-y-6">
+					<h3 class="text-lg sm:text-2xl lg:text-2xl font-bold text-slate-900">Design Goals</h3>
+					<div class="grid gap-4 sm:gap-6 lg:grid-cols-2">
+						<div class="p-4 sm:p-6 rounded-xl bg-blue-50 border border-blue-100 space-y-3 sm:space-y-4">
+							<div class="flex items-center gap-3 mb-2">
+								<span class="text-2xl text-indigo-600"><i class="ri-palette-line"></i></span>
+								<h3 class="text-lg sm:text-xl font-bold text-slate-900">1. Consistency</h3>
+							</div>
+							<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+								Ensuring a unified look and feel across the entire Challonge platform, creating a cohesive user experience that reflects our brand identity and design principles.
+							</p>
 						</div>
-						<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
-							Ensuring a unified look and feel across the entire Challonge platform, creating a cohesive user experience that reflects our brand identity and design principles.
-						</p>
+						<div class="p-4 sm:p-6 rounded-xl bg-blue-50 border border-blue-100 space-y-3 sm:space-y-4">
+							<div class="flex items-center gap-3 mb-2">
+								<span class="text-2xl text-indigo-600"><i class="ri-speed-up-line"></i></span>
+								<h3 class="text-lg sm:text-xl font-bold text-slate-900">2. Efficiency</h3>
+							</div>
+							<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+								Streamlining design and development workflows by providing reusable components and clear guidelines, reducing time spent on repetitive tasks and decision-making.
+							</p>
+						</div>
+						<div class="p-4 sm:p-6 rounded-xl bg-blue-50 border border-blue-100 space-y-3 sm:space-y-4">
+							<div class="flex items-center gap-3 mb-2">
+								<span class="text-2xl text-indigo-600"><i class="ri-expand-left-right-line"></i></span>
+								<h3 class="text-lg sm:text-xl font-bold text-slate-900">3. Scalability</h3>
+							</div>
+							<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+								Supporting future growth and new features by establishing a flexible and extensible design system that can adapt to evolving product needs.
+							</p>
+						</div>
 					</div>
-					<div class="p-4 sm:p-6 rounded-xl bg-blue-50 border border-blue-100 space-y-3 sm:space-y-4">
-						<div class="flex items-center gap-3 mb-2">
-							<span class="text-2xl text-indigo-600"><i class="ri-speed-up-line"></i></span>
-							<h3 class="text-lg sm:text-xl font-bold text-slate-900">2. Efficiency</h3>
+				</div>
+
+				<!-- Business Goals -->
+				<div class="space-y-4 sm:space-y-6">
+					<h3 class="text-lg sm:text-2xl lg:text-2xl font-bold text-slate-900">Business Goals</h3>
+					<div class="grid gap-4 sm:gap-6 lg:grid-cols-2">
+						<div class="p-4 sm:p-6 rounded-xl bg-blue-50 border border-blue-100 space-y-3 sm:space-y-4">
+							<div class="flex items-center gap-3 mb-2">
+								<span class="text-2xl text-indigo-600"><i class="ri-rocket-line"></i></span>
+								<h3 class="text-lg sm:text-xl font-bold text-slate-900">1. Increased productivity and faster iteration</h3>
+							</div>
+							<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+								Allows the team to deliver projects faster and allocate resources more effectively.
+							</p>
 						</div>
-						<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
-							Streamlining design and development workflows by providing reusable components and clear guidelines, reducing time spent on repetitive tasks and decision-making.
-						</p>
-					</div>
-					<div class="p-4 sm:p-6 rounded-xl bg-blue-50 border border-blue-100 space-y-3 sm:space-y-4">
-						<div class="flex items-center gap-3 mb-2">
-							<span class="text-2xl text-indigo-600"><i class="ri-expand-left-right-line"></i></span>
-							<h3 class="text-lg sm:text-xl font-bold text-slate-900">3. Scalability</h3>
+						<div class="p-4 sm:p-6 rounded-xl bg-blue-50 border border-blue-100 space-y-3 sm:space-y-4">
+							<div class="flex items-center gap-3 mb-2">
+								<span class="text-2xl text-indigo-600"><i class="ri-user-heart-line"></i></span>
+								<h3 class="text-lg sm:text-xl font-bold text-slate-900">2. Enhanced UX</h3>
+							</div>
+							<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+								Allows for the creation of user-friendly, intuitive interfaces that can lead to higher user engagement, retention, and satisfaction.
+							</p>
 						</div>
-						<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
-							Supporting future growth and new features by establishing a flexible and extensible design system that can adapt to evolving product needs.
-						</p>
-					</div>
-					<div class="p-4 sm:p-6 rounded-xl bg-blue-50 border border-blue-100 space-y-3 sm:space-y-4">
-						<div class="flex items-center gap-3 mb-2">
-							<span class="text-2xl text-indigo-600"><i class="ri-eye-line"></i></span>
-							<h3 class="text-lg sm:text-xl font-bold text-slate-900">4. Accessibility</h3>
+						<div class="p-4 sm:p-6 rounded-xl bg-blue-50 border border-blue-100 space-y-3 sm:space-y-4">
+							<div class="flex items-center gap-3 mb-2">
+								<span class="text-2xl text-indigo-600"><i class="ri-line-chart-line"></i></span>
+								<h3 class="text-lg sm:text-xl font-bold text-slate-900">3. Scalability</h3>
+							</div>
+							<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+								Ensures that the user experience remains consistent and high-quality, even as the organization introduces new products or services.
+							</p>
 						</div>
-						<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
-							Making the platform usable for everyone by incorporating accessibility best practices and WCAG guidelines into every component and pattern.
-						</p>
 					</div>
 				</div>
 			</div>
@@ -116,38 +149,38 @@ import challongeHeader from '../assets/challonge/Challonge_Header.svg';
 				<div class="grid gap-4 sm:gap-6 lg:grid-cols-2">
 					<div class="p-4 sm:p-6 rounded-xl bg-amber-50 border border-amber-100 space-y-3 sm:space-y-4">
 						<div class="flex items-center gap-3 mb-2">
-							<span class="text-2xl text-amber-600"><i class="ri-time-line"></i></span>
-							<h3 class="text-lg sm:text-xl font-bold text-slate-900">1. Time</h3>
+							<span class="text-2xl text-amber-600"><i class="ri-moon-line"></i></span>
+							<h3 class="text-lg sm:text-xl font-bold text-slate-900">1. Dark UI</h3>
 						</div>
 						<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
-							Limited timeframe for implementation required careful prioritization and phased rollout of design system components.
+							The design system should primarily focus on dark theme but could still be open to scale for other themes in the future.
 						</p>
 					</div>
 					<div class="p-4 sm:p-6 rounded-xl bg-amber-50 border border-amber-100 space-y-3 sm:space-y-4">
 						<div class="flex items-center gap-3 mb-2">
-							<span class="text-2xl text-amber-600"><i class="ri-team-line"></i></span>
-							<h3 class="text-lg sm:text-xl font-bold text-slate-900">2. Resources</h3>
+							<span class="text-2xl text-amber-600"><i class="ri-user-star-line"></i></span>
+							<h3 class="text-lg sm:text-xl font-bold text-slate-900">2. Overlord Governance</h3>
 						</div>
 						<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
-							Constraints on available personnel and tools necessitated efficient resource allocation and strategic tool selection.
+							As the sole lead designer for the team, I am responsible for the decisions that are related to the design system.
 						</p>
 					</div>
 					<div class="p-4 sm:p-6 rounded-xl bg-amber-50 border border-amber-100 space-y-3 sm:space-y-4">
 						<div class="flex items-center gap-3 mb-2">
-							<span class="text-2xl text-amber-600"><i class="ri-code-s-slash-line"></i></span>
-							<h3 class="text-lg sm:text-xl font-bold text-slate-900">3. Legacy Code</h3>
+							<span class="text-2xl text-amber-600"><i class="ri-layout-grid-line"></i></span>
+							<h3 class="text-lg sm:text-xl font-bold text-slate-900">3. Foundational Styles and Components</h3>
 						</div>
 						<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
-							Challenges integrating with existing codebase required careful migration strategies and backward compatibility considerations.
+							Only scoped to foundational styles and components. These include colors, typography, and widely used components like form elements, cards, tables, etc.
 						</p>
 					</div>
 					<div class="p-4 sm:p-6 rounded-xl bg-amber-50 border border-amber-100 space-y-3 sm:space-y-4">
 						<div class="flex items-center gap-3 mb-2">
-							<span class="text-2xl text-amber-600"><i class="ri-file-warning-line"></i></span>
-							<h3 class="text-lg sm:text-xl font-bold text-slate-900">4. Technical Debt</h3>
+							<span class="text-2xl text-amber-600"><i class="ri-file-text-line"></i></span>
+							<h3 class="text-lg sm:text-xl font-bold text-slate-900">4. Minimal Documentation</h3>
 						</div>
 						<p class="text-base sm:text-lg text-slate-700 leading-relaxed">
-							Addressing existing technical issues while building new components required balancing refactoring efforts with new feature development.
+							Focused our energy on building the components visually then refine the documentation and guidelines after.
 						</p>
 					</div>
 				</div>
@@ -158,34 +191,36 @@ import challongeHeader from '../assets/challonge/Challonge_Header.svg';
 				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">Technology</h2>
 				<div class="flex flex-wrap items-center gap-6 sm:gap-8">
 					<div class="flex flex-col items-center gap-2">
-						<div class="w-16 h-16 sm:w-20 sm:h-20 bg-blue-100 rounded-lg flex items-center justify-center">
-							<span class="text-2xl sm:text-3xl">⚛️</span>
+						<div class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+							<span class="text-2xl sm:text-3xl">
+								<img src={reactLogo.src} alt="React" class="w-full h-full" />
+							</span>
 						</div>
 						<span class="text-sm sm:text-base text-slate-700 font-medium">React</span>
 					</div>
 					<div class="flex flex-col items-center gap-2">
-						<div class="w-16 h-16 sm:w-20 sm:h-20 bg-blue-100 rounded-lg flex items-center justify-center">
-							<span class="text-sm sm:text-base font-bold text-blue-600">TS</span>
+						<div class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+							<span class="text-sm sm:text-base font-bold text-blue-600"><img src={typescriptLogo.src} alt="TypeScript" class="w-full h-full" /></span>
 						</div>
 						<span class="text-sm sm:text-base text-slate-700 font-medium">TypeScript</span>
 					</div>
 					<div class="flex flex-col items-center gap-2">
-						<div class="w-16 h-16 sm:w-20 sm:h-20 bg-green-100 rounded-lg flex items-center justify-center">
-							<span class="text-xl sm:text-2xl">⚡</span>
+						<div class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+							<span class="text-xl sm:text-2xl"><img src={graphqlLogo.src} alt="GraphQL" class="w-full h-full" /></span>
 						</div>
 						<span class="text-sm sm:text-base text-slate-700 font-medium">GraphQL</span>
 					</div>
 					<div class="flex flex-col items-center gap-2">
-						<div class="w-16 h-16 sm:w-20 sm:h-20 bg-pink-100 rounded-lg flex items-center justify-center">
-							<span class="text-sm sm:text-base font-bold text-pink-600">S</span>
+						<div class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+							<span class="text-sm sm:text-base font-bold text-pink-600"><img src={storybookLogo.src} alt="Storybook" class="w-full h-full" /></span>
 						</div>
 						<span class="text-sm sm:text-base text-slate-700 font-medium">Storybook</span>
 					</div>
 					<div class="flex flex-col items-center gap-2">
-						<div class="w-16 h-16 sm:w-20 sm:h-20 bg-pink-100 rounded-lg flex items-center justify-center">
-							<span class="text-sm sm:text-base font-bold text-pink-600">F</span>
+						<div class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+							<span class="text-sm sm:text-base font-bold text-pink-600"><img src={nextjslogo.src} alt="Next.js" class="w-full h-full" /></span>
 						</div>
-						<span class="text-sm sm:text-base text-slate-700 font-medium">Figma</span>
+						<span class="text-sm sm:text-base text-slate-700 font-medium">NextJS</span>
 					</div>
 				</div>
 			</div>
@@ -194,25 +229,22 @@ import challongeHeader from '../assets/challonge/Challonge_Header.svg';
 			<div class="mt-8 sm:mt-10 space-y-4 sm:space-y-6">
 				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">Discovery</h2>
 				<p class="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed">
-					The discovery phase involved comprehensive user research, competitive analysis, and identifying key pain points in the current platform. Through user interviews, surveys, and feedback collection, we gained valuable insights into user needs and expectations.
-				</p>
-				<p class="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed">
-					Competitive analysis of similar platforms helped us understand industry standards and identify opportunities for differentiation. This research informed our design decisions and ensured the design system would address real user needs.
+					The feature started through one of the best methods to gather feedback from ours users: using our own product and actually organizing our own Tekken 7 tournament!
 				</p>
 				
 				<!-- Two images side-by-side -->
 				<div class="grid gap-4 sm:gap-6 lg:grid-cols-2">
 					<div class="flex flex-col gap-3 sm:gap-4">
-						<div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden aspect-video flex items-center justify-center">
-							<span class="text-slate-500 text-sm">Discovery Meeting Placeholder</span>
+						<div class="rounded-4xl border border-slate-200 bg-slate-50 overflow-hidden flex items-center justify-center">
+							<img src={discoveryOne.src} alt="Challonge Tournament" class="w-full h-full" />
 						</div>
-						<Caption text="Discovery meeting with team members." />
+						<Caption text="Me and the CTO checking-in participants." />
 					</div>
 					<div class="flex flex-col gap-3 sm:gap-4">
-						<div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden aspect-video flex items-center justify-center">
-							<span class="text-slate-500 text-sm">UI Screenshot Placeholder</span>
+						<div class="rounded-4xl border border-slate-200 bg-slate-50 overflow-hidden flex items-center justify-center">
+							<img src={discoveryTwo.src} alt="Challonge Tournament" class="w-full h-full" />
 						</div>
-						<Caption text="Current platform UI analysis." />
+						<Caption text="Challonge to Major tournament bracket in action." />
 					</div>
 				</div>
 				
