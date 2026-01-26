@@ -24,7 +24,7 @@ const testimonials: Testimonial[] = [
 		name: "Mansee Sheth",
 		title: "Product Manager",
 		company: "Marketplacer",
-		text: "Taniya's work is defined by her exceptional attention to detail and keen eye for aesthetics and usability. She never settles for the minimum and consistently goes beyond her assignments to propose innovative ideas and fantastic suggestions that have significantly improved our projects.",
+		text: "I highly recommend Patrick. He was instrumental in shaping the one of the key initiative within marketplace experience, particularly from the Seller and Operator perspective. Patrick consistently factored in the complex end-to-end user journey, ensuring a seamless experience. His ability to deliver a strong MVP while keeping the bigger product vision in mind, all while embedding our design system, was key to get stakeholders aligned and success of key features of the product.",
 		imageSrc: manseeAvatar.src,
 	},
     {
@@ -58,10 +58,10 @@ const testimonials: Testimonial[] = [
 				<!-- First set of testimonials -->
 				{testimonials.map((testimonial, index) => (
 					<div 
-						class="min-w-full md:min-w-[50%] px-2 sm:px-4"
+						class="min-w-[85%] sm:min-w-[400px] md:min-w-[50%] px-2 sm:px-4"
 						data-index={index}
 					>
-						<div class="bg-white rounded-xl sm:rounded-2xl border border-slate-200 p-4 sm:p-6 lg:p-8 shadow-sm max-w-[90%] sm:max-w-[320px] md:max-w-[600px] mx-auto">
+						<div class="bg-white rounded-xl sm:rounded-2xl border border-slate-200 p-4 sm:p-6 lg:p-8 shadow-sm w-full max-w-[320px] sm:max-w-[500px] md:max-w-[600px] mx-auto">
 							<div class="flex items-start gap-3 sm:gap-4 md:gap-6 mb-3 sm:mb-4 md:mb-6">
 								<!-- Profile Picture -->
 								<div class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-slate-200 shrink-0 flex items-center justify-center overflow-hidden">
@@ -98,10 +98,10 @@ const testimonials: Testimonial[] = [
 				<!-- Duplicate set for seamless loop -->
 				{testimonials.map((testimonial, index) => (
 					<div 
-						class="min-w-full md:min-w-[50%] px-2 sm:px-4"
+						class="min-w-[85%] sm:min-w-[400px] md:min-w-[50%] px-2 sm:px-4"
 						data-index={index + testimonials.length}
 					>
-						<div class="bg-white rounded-xl sm:rounded-2xl border border-slate-200 p-4 sm:p-6 lg:p-8 shadow-sm max-w-[90%] sm:max-w-[500px] md:max-w-[600px] mx-auto">
+						<div class="bg-white rounded-xl sm:rounded-2xl border border-slate-200 p-4 sm:p-6 lg:p-8 shadow-sm w-full max-w-[320px] sm:max-w-[500px] md:max-w-[600px] mx-auto">
 							<div class="flex items-start gap-3 sm:gap-4 md:gap-6 mb-3 sm:mb-4 md:mb-6">
 								<!-- Profile Picture -->
 								<div class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-slate-200 shrink-0 flex items-center justify-center overflow-hidden">
@@ -137,10 +137,10 @@ const testimonials: Testimonial[] = [
 			</div>
 			
 			<!-- Left gradient fade -->
-			<div class="absolute left-0 top-0 bottom-0 w-24 sm:w-24 md:w-24 bg-linear-to-r from-white to-transparent z-10 pointer-events-none"></div>
+			<div class="hidden md:block absolute left-0 top-0 bottom-0 w-24 md:w-24 bg-linear-to-r from-white to-transparent z-10 pointer-events-none"></div>
 			
 			<!-- Right gradient fade -->
-			<div class="absolute right-0 top-0 bottom-0 w-24 sm:w-24 md:w-24 bg-linear-to-l from-white to-transparent z-10 pointer-events-none"></div>
+			<div class="hidden md:block absolute right-0 top-0 bottom-0 w-24 md:w-24 bg-linear-to-l from-white to-transparent z-10 pointer-events-none"></div>
 		</div>
 	</div>
 </section>
