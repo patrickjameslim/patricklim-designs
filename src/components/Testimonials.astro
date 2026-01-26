@@ -165,7 +165,7 @@ const testimonials: Testimonial[] = [
 			let isPaused = false;
 			let position = 0;
 			const desktopSpeed = 0.03; // pixels per frame for desktop
-			const mobileSpeed = 0.06; // pixels per frame for mobile (2x faster)
+			const mobileSpeed = 0.1; // pixels per frame for mobile (2x faster)
 			
 			const getSpeed = (): number => {
 				return window.innerWidth >= 768 ? desktopSpeed : mobileSpeed;
