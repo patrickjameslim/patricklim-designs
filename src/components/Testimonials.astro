@@ -164,7 +164,12 @@ const testimonials: Testimonial[] = [
 			let animationId: number;
 			let isPaused = false;
 			let position = 0;
-			const speed = 0.03; // pixels per frame (adjust for speed)
+			const desktopSpeed = 0.03; // pixels per frame for desktop
+			const mobileSpeed = 0.06; // pixels per frame for mobile (2x faster)
+			
+			const getSpeed = (): number => {
+				return window.innerWidth >= 768 ? desktopSpeed : mobileSpeed;
+			};
 			
 			const animate = () => {
 				if (!isPaused) {
@@ -172,6 +177,7 @@ const testimonials: Testimonial[] = [
 					const cardWidth = 100 / cardsPerView; // percentage width per card
 					const totalCards = testimonials.length / 2; // Only count first set (duplicates are for seamless loop)
 					const maxPosition = totalCards * cardWidth; // Total width of first set
+					const speed = getSpeed();
 					
 					position += speed;
 					
